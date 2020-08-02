@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "82697208041",
+    "firebase_url": "https://sports-news-6ad16.firebaseio.com",
+    "project_id": "sports-news-6ad16",
+    "storage_bucket": "sports-news-6ad16.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:82697208041:android:6f63be6cbeee55ac6f3078",
+        "android_client_info": {
+          "package_name": "com.jaredmuralt.sportsnews"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "82697208041-ssgdlhbkqg0gk8okdrdsvr6kijr4pkdu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBiYloigOfO4k90HsCy_pRsBqKQ7u-suoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "82697208041-ssgdlhbkqg0gk8okdrdsvr6kijr4pkdu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

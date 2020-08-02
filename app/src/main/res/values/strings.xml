@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Sports News</string>
+    <string name="api_key">ad532934e09c46f1926c2dc25f7b6708</string>
+    <string name="url">url</string>
+    <string name="timeout_error_message">Could not fetch news. Check your internet connection.</string>
+    <string name="something_went_wrong">Something went wrong.</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="sign_in_cancelled">Sign In Cancelled</string>
+    <string name="no_internet">No internet connection</string>
+    <string name="unknown_error">Unknown Error</string>
+    <string name="saved_for_later">Saved For Later</string>
+</resources>
