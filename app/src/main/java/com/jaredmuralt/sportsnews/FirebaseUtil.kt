@@ -11,9 +11,9 @@ import com.jaredmuralt.sportsnews.model.Article
 object FirebaseUtil {
 
     var savedArticles : ArrayList<Article> = ArrayList()
-    val database = FirebaseDatabase.getInstance()
-    val userId = FirebaseAuth.getInstance().currentUser?.uid
-    val savedArticlesRef = database.getReference("$userId/savedArticles")
+    var database = FirebaseDatabase.getInstance()
+    var userId = FirebaseAuth.getInstance().currentUser?.uid
+    var savedArticlesRef = database.getReference("$userId/savedArticles")
     private var listener: ValueEventListener? = null
 
     init {
@@ -21,10 +21,12 @@ object FirebaseUtil {
     }
 
     fun startListener(){
-        listener = savedArticlesRef.addValueEventListener(object :  ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
-                println("CANCELLLLLLEEEEEDDDDDDD")
-            }
+        savedArticles = ArrayList()
+        database = FirebaseDatabase.getInstance()
+        userId = FirebaseAuth.getInstance().currentUser?.uid
+        savedArticlesRef = database.getReference("$userId/savedArticles")
+        listener = object :  ValueEventListener {
+            override fun onCancelled(error: DatabaseError) {}
 
             override fun onDataChange(snapshot: DataSnapshot) {
                 val children = snapshot.children
@@ -34,11 +36,14 @@ object FirebaseUtil {
                     savedArticles.last().id = it.key!!
                 }
             }
-        })
+        }
+
+        savedArticlesRef.addValueEventListener(listener as ValueEventListener);
     }
 
     fun stopListener(){
         savedArticlesRef.removeEventListener(listener!!)
+        listener = null;
     }
 
     fun addArticleToSavedForLater(article: Article){
